@@ -43,7 +43,7 @@ bun run dev   # http://localhost:8080, expects auth on :4000 and blob on :3000
 Start the stacks in this order. auth_service's creates the shared `blob-storage` network, and the gateway reaches the others on it as `auth` and `blob`:
 
 ```bash
-cd ../auth_service && docker compose up -d --build   # :4000
+cd ../Blob_auth && docker compose up -d --build   # :4000
 cd ../Blob_storage && docker compose up -d --build   # :3000, S3Mock on :9090
 cd ../Blob_api_gateway && docker compose up -d --build   # :8080
 cd ../Blob_frontend && docker compose up -d --build  # :5173, open this one
